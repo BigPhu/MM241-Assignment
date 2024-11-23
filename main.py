@@ -49,20 +49,20 @@ if __name__ == "__main__":
     #         ep += 1
 
     # Reset the environment
-    observation, info = env.reset(seed=random_seed)
+    # observation, info = env.reset(seed=random_seed)
 
-    # Test Policy2352921
-    print("\n========= Running Column Generation Policy =========\n")
-    policy = Policy2352921()
-    ep = 0
-    while ep < NUM_EPISODES:    
-        action = policy.get_action(observation, info)
-        observation, reward, terminated, truncated, info = env.step(action)
+    # # Test Policy2352921
+    # print("\n========= Running Column Generation Policy =========\n")
+    # policy = Policy2352921()
+    # ep = 0
+    # while ep < NUM_EPISODES:    
+    #     action = policy.get_action(observation, info)
+    #     observation, reward, terminated, truncated, info = env.step(action)
 
-        if terminated or truncated:
-            print(info)
-            observation, info = env.reset(seed=ep)
-            ep += 1
+    #     if terminated or truncated:
+    #         print(info)
+    #         observation, info = env.reset(seed=ep)
+    #         ep += 1
 
     # Uncomment the following code to test your policy
     # Reset the environment
